@@ -61,6 +61,7 @@ func (receiver *server) handleBurgersSave() func(responseWriter http.ResponseWri
 			return
 		}
 
+
 		http.Redirect(writer, request, "/", http.StatusPermanentRedirect)
 		return
 	}
