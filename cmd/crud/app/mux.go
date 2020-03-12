@@ -48,7 +48,6 @@ func (m *exactMux) handleFunc(method string, pattern string, handlerFunc func(re
 		panic(errors.New("handler can't be empty"))
 	}
 
-	// TODO: check method
 	m.mutex.Lock()
 	defer m.mutex.Unlock()
 	entry := exactMuxEntry{
